@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+
+.container {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	background: #ccc;
+}
+
+.wrapper {
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	flex: 1;
+	overflow: hidden;
+	background: #f2f2f2;
+	flex-direction: column;
+}
+
+.sidebar {
+	top: 0;
+	display: block;
+	width: 400px;
+	background: #383838;
+}
+
+.header {
+	top: 0;
+	display: flex;
+	height: 88px;
+	background: #fff;
+	box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content {
+	flex: 1;
+}
+
+
+
+/* sidebar menu */
+
+
+
+.menu {
+	margin: 30px;
+}
+
+.menu-item {
+	display: flex;
+	height: 70px;
+	border-bottom: 1px solid rgba(242, 242, 242, 0.1);
+}
+
+.menu-item:last-child {
+	border: none;
+}
+
+.menu-item a {
+	flex: 1;
+	display: flex;
+	padding: 15px;
+	color: #b7b7b7;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.menu-item-active a,
+.menu-item a:hover {
+	color: #FFFFFF;
+	background: rgba(242, 242, 242, 0.1);
+}
+
+
+/*header*/
+
+.search {
+	display: flex;
+	margin-left: 43px;
+}
+.search-button {
+	margin-left:15px;
+}
+.search-button input {
+	width: 89px;
+	height: 40px;
+	background: #E7A04E;
+	border: none;
+	border-radius: 7px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 40px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.add-movie-button {
+	margin-right: 51px;
+	width: 158px;
+	height: 40px;
+	background: #4ee7b0;
+	border-radius: 7px;
+	border: none;
+	text-align: center;
+}
+.add-movie-button a {
+	padding: 10px 16px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 40px;
+	text-transform: uppercase;
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+}
+.search-section {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #C4C4C4;;
+}
+
+.input {
+	height: 100%;
+	display: flex;
+	padding-left: 17px;
+	align-items: center;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 40px;
+	color: #999999;
+}
+
+.input-text {
+	height: 100%;
+	width: 492px;
+	border: none;
+	background: none;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.search-icon {
+	width: 24px;
+	height: 24px;
+	background: url("../data/icons/search.svg") no-repeat;
+}
+
+/*content*/
+
+
+
+.logo {
+	margin: 59px 93px;
+	width: 210px;
+	height: 67px;
+	background: url("../data/icons/logo-bitflix.svg");
+}
+
+.move-item {
+	display: inline-flex;
+	position: relative;
+	overflow: hidden;
+	width: 300px;
+	padding: 20px;
+	height: 700px;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow: 0 3px 5px rgb(0 0 0 / 10%);
+	margin-top: 10px;
+}
+
+.move-item-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.move-item-overlay a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 70px;
+	background: #4ee7b0;
+	border-radius: 7px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 56px;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.move-item:hover .move-item-overlay {
+	display: flex;
+}
+
+.move {
+	padding: 0 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.movie-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 340px;
+	overflow: hidden;
+	height: 439px;
+}
+
+.poster {
+	top: 0;
+	left: 0;
+	width: 380px;
+	height: 567px;
+
+}
+
+.movie-title {
+	line-height: 1;
+	position: absolute;
+	left: 4.41%;
+	right: 0;
+	top: 61.14%;
+	bottom: 31.71%;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	color: #333;
+
+}
+
+.original-title {
+	position: absolute;
+	left: 4.41%;
+	right: 10.27%;
+	top: 66.29%;
+	bottom: 28.14%;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 25px;
+	color: #999;
+}
+
+.description {
+	position: absolute;
+	left: 4.41%;
+	right: 5.41%;
+	top: 71.29%;
+	bottom: 9.57%;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333;
+
+}
+
+.clock-logo {
+	position: absolute;
+	left: 5.41%;
+	right: 88.5%;
+	top: 93.71%;
+	bottom: 2.43%;
+}
+
+.duration {
+	position: absolute;
+	left: 11.62%;
+	right: 57.3%;
+	top: 93.71%;
+	bottom: 3.5%;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 22px;
+	color: #ccc;
+}
+
+.genres {
+	position: absolute;
+	left: 38.51%;
+	right: 5.41%;
+	top: 93.71%;
+	bottom: 3.5%;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 10px;
+	line-height: 22px;
+	text-align: right;
+	text-transform: uppercase;
+	color: #ccc;
+}
+
+.clock-logo {
+	position: absolute;
+	left: 5.41%;
+	right: 88.5%;
+	top: 93.71%;
+	bottom: 27px;
+	background: url("../data/icons/clock.png");
+}
+
+.movie-page-content {
+	margin-top: 20px;
+	display: flex;
+	width: 1170px;
+	height: 985px;
+	background: #fff;
+	flex-direction: column;
+	padding: 20px 20px;
+}
+
+.title-plus-favourite {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.favourite {
+	margin-right: 50px;
+}
+
+.favourite:hover {
+	cursor: pointer;
+}
+
+.title {
+	width: 1000px;
+	height: 64px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 65px;
+	color: #333;
+}
+
+.orig-title {
+	width: 200px;
+	height: 42px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 33px;
+	color: #999;
+}
+
+.line {
+	width: 1112px;
+	height: 1px;
+	background: #ccc;
+}
+
+.age {
+	text-align: center;
+	width: 39px;
+	height: 28px;
+	border: 3px solid #ccc;
+	border-radius: 7px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 25px;
+	color: #ccc;
+}
+
+.original-title-age {
+	width: 400px;
+	display: flex;
+	flex-direction: row;
+}
+
+.description-poster {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.rating {
+	display: flex;
+}
+
+.rating-item {
+	box-sizing: border-box;
+	background: #f2f2f2;
+	border: 5px solid #fff;
+	width: 27px;
+	height: 27px;
+}
+
+.rating-item-active {
+	box-sizing: border-box;
+	background: #e78818;
+	border: 5px solid #fff;
+	width: 27px;
+	height: 27px;
+}
+
+.rating-container {
+	display: flex;
+	flex-direction: row;
+	margin-top: 15px;
+}
+
+
+
+.rating-num {
+	background: #e78818;
+	border-radius: 50%;
+	width: 55px;
+	height: 55px;
+	text-align: center;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.release-date-line {
+	padding-top: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.director-line {
+	padding-top: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.cast-line {
+	padding-top: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.description-poster {
+	padding: 20px 0 0 0;
+}
+
+.movie-poster {
+	top: 0;
+	left: 0;
+	width: 469px;
+	height: 730px;
+}
+
+.about-movie-descr {
+	padding-top: 30px;
+	padding-right: 30px;
+	width: 577px;
+}
+
+.movie-reference {
+	padding-top: 20px;
+	width: 164px;
+	height: 37px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 33px;
+
+	color: #333;
+}
+
+.release-date {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #666;
+}
+
+.director {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #666;
+}
+
+.cast {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #666;
+}
+
+.year-release {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #000;
+	width: 360px;
+}
+
+.director-name {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #000;
+	width: 360px;
+}
+
+.name-cast {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #000;
+	width: 360px;
+}
+
+.descr {
+	padding-top: 40px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 33px;
+	color: #333;
+}
+
+.full-descr {
+	padding-top: 20px;
+	font-family: "Open Sans", serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 28px;
+	color: #000;
+}
+
+
