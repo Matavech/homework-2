@@ -4,8 +4,8 @@
  * @var string $title
  * @var array $movies
  * @var string $content
+ * @var string $sidebar_content
  */
-
 ?>
 
 <!DOCTYPE html>
@@ -20,22 +20,14 @@
 <body>
 <div class="container">
 	<div class="sidebar">
-		<div class="logo">
-		</div>
+		<a href="/index.php"><img src="/data/icons/logo-bitflix.svg" class="logo"></a>
 		<div class="menu">
 			<div class="menu-item">
-				<a href="../public/index.php">Главная</a>
+				<a href="/index.php">Главная</a>
 			</div>
-			<?php
-			foreach ($genres as $genre): ?>
-				<div class="menu-item">
-					<a href="../public/movies-by-genre.php?genre=<?= $genre ?>"><?php
-						echo $genre ?></a>
-				</div>
-			<?php
-			endforeach; ?>
+			<?= $sidebar_content ?>
 			<div class="menu-item">
-				<a href="../public/favourites.php">Избранное</a>
+				<a href="/favourites.php">Избранное</a>
 			</div>
 		</div>
 	</div>
@@ -43,19 +35,21 @@
 		<div class="header">
 			<div class="search">
 				<div class="search-section">
-					<div class="search-icon">
+					<div class="search-icon-div">
+						<img src="/data/icons/search.png" , alt="X" class="search-icon">
 					</div>
 					<div class="input">
 						<input class="input-text" type="text" placeholder="Поиск по каталогу...">
 					</div>
 				</div>
 				<div class="search-button">
-					<input class="header-button" type="submit" value="Искать">
+					<a href="#" class="header-button">Искать</a>
 				</div>
 			</div>
 			<div class="add-movie-button">
-				<a href="../public/add-movie.php" class="header-button" >Добавить фильм</a>
+				<a href="/add-movie.php" class="header-button">Добавить фильм</a>
 			</div>
+
 		</div>
 		<div class="content">
 			<?= $content ?>

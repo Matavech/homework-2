@@ -1,6 +1,9 @@
 <?php
-require_once __DIR__ . '/../boot.php';
-require_once __DIR__ . '/../data/movies.php';
+
+require_once  $_SERVER['DOCUMENT_ROOT'] . '/../boot.php';
+require_once ROOT . '/public/data/movies.php';
+
+
 $title = 'Bitfix';
 
 /**
