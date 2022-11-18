@@ -21,6 +21,7 @@
 		<div class="age">
 			<?= $movie['age-restriction'] ?>+
 		</div>
+
 	</div>
 	<div class="line"></div>
 	<div class="description-poster">
