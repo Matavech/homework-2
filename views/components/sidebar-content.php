@@ -5,9 +5,9 @@
 ?>
 
 <?php
-foreach ($genres as $genre): ?>
+foreach ($genres as $key => $genre): ?>
 	<div class="menu-item">
-		<a href="/index.php?genre=<?= $genre ?>"><?php
+		<a href="/index.php?genre=<?= $key ?>"><?php
 			echo $genre ?></a>
 	</div>
 <?php

@@ -54,7 +54,7 @@ function getMoviesByGenre(string $code, array $movies, array $genres): array
 
 	foreach($movies as $movie)
 	{
-		if ((in_array($code, $movie['genres'], true)) || (isset($genres[$code]) && in_array($genres[$code], $movie['genres'], true)))
+		if ((isset($genres[$code]) && in_array($genres[$code], $movie['genres'], true)))
 		{
 			$moviesOfGenre[] = $movie;
 		}
