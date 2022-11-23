@@ -8,7 +8,7 @@
 require_once  $_SERVER['DOCUMENT_ROOT'] . '/../boot.php';
 require_once ROOT . '/public/data/movies.php';
 
-$title = 'Bitfix';
+$title = option('TITLE');
 
 if (isset($_GET['genre']))
 {
