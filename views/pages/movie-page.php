@@ -10,3 +10,4 @@
 		'movie' => $movies,
 	]) ?>
 </div>
+

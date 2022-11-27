@@ -10,7 +10,7 @@ require_once ROOT . '/public/data/movies.php';
 $title = 'Bitfix';
 
 $movieId = $_GET['id'] ?? 1;
-$movie = getMovieById($movies, (int)$movieId);
+$movie = getMovieById($movies, $movieId);
 
 echo view('layout', [
 	'title' => $title,

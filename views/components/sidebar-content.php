@@ -12,3 +12,4 @@ foreach ($genres as $key => $genre): ?>
 	</div>
 <?php
 endforeach; ?>
+

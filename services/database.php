@@ -22,8 +22,14 @@
 
 		return $connection;
 	}
-	function getDbResult($query) {
+	function getDbResultByQuery($query) {
 		$connection = getDbConnection();
 		$result = mysqli_query($connection, $query);
+
+		if(!$result)
+		{
+			throw new Exception(mysqli_error($connection));
+		}
+
 		return $result;
 	}
