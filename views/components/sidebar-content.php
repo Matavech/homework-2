@@ -2,6 +2,7 @@
 /**
  * @var array $genres
  */
+
 ?>
 
 <?php

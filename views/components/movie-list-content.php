@@ -2,6 +2,7 @@
 /**
  * @var array $movie
  */
+
 ?>
 <div class="move-item">
 	<div class="movie-img">

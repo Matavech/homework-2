@@ -6,6 +6,7 @@
  * @var string $content
  * @var string $sidebar_content
  */
+
 ?>
 
 <!DOCTYPE html>

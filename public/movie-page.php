@@ -1,16 +1,17 @@
 <?php
+/** @noinspection SuspiciousBinaryOperationInspection */
+
 /**
  * @var array $genres
  * @var array $movies
  */
 declare(strict_types=1);
-require_once  $_SERVER['DOCUMENT_ROOT'] . '/../boot.php';
-require_once ROOT . '/public/data/movies.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/../boot.php';
 
-$title = 'Bitfix';
-
-$movieId = $_GET['id'] ?? 1;
-$movie = getMovieById($movies, $movieId);
+$title = option('TITLE', 'Bitflix');
+$genres = getGenresFromDb();
+$movieId = (int)$_GET['id'] ?? 1;
+$movie = getMovieById($movieId);
 
 echo view('layout', [
 	'title' => $title,

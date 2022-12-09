@@ -2,6 +2,7 @@
 /**
  * @var array $movies
  */
+
 ?>
 
 <div class="move">
@@ -9,6 +10,7 @@
 	foreach ($movies as $movie): ?>
 		<?= view('components/movie-list-content', [
 			'movie' => $movie,
-		])?>
-	<?php endforeach ?>
+		]) ?>
+	<?php
+	endforeach ?>
 </div>

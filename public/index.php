@@ -5,15 +5,11 @@
  * @var array $movies
  */
 
-require_once  $_SERVER['DOCUMENT_ROOT'] . '/../boot.php';
-require_once ROOT . '/public/data/movies.php';
+require_once __DIR__ . '/../boot.php';
 
-$title = option('TITLE');
-
-if (isset($_GET['genre']))
-{
-	$movies = getMoviesByGenre($_GET['genre'], $movies, $genres);
-}
+$title = option('TITLE', 'Bitlflix');
+$genres = getGenresFromDb();
+$movies = getMoviesFromDb($_GET['genre']);
 
 echo view('layout', [
 	'title' => $title,

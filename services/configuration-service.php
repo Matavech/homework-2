@@ -1,10 +1,14 @@
 <?php
+
+/**
+ * @throws Exception
+ */
 function option(string $name, $defaultValue = null)
 {
- 	/** @var array $config */
+	/** @var array $config */
 	static $config = null;
 
-	if($config=== null)
+	if ($config === null)
 	{
 		$masterConfig = require ROOT . '/config.php';
 		if (file_exists(ROOT . '/config.local.php'))
@@ -21,14 +25,14 @@ function option(string $name, $defaultValue = null)
 
 	if (array_key_exists($name, $config))
 	{
-		return($config[$name]);
+		return ($config[$name]);
 	}
 
-	if ($defaultValue===null)
+	if ($defaultValue === null)
 	{
 		return $defaultValue;
 	}
 
-	throw new Exception("Configuration option {$name} not found");
+	throw new RuntimeException("Configuration option {$name} not found");
 
 }

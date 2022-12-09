@@ -3,6 +3,7 @@
  * @var array $movie
  * @var array $movies
  */
+
 ?>
 <div class="movie-page-content">
 
@@ -51,7 +52,7 @@
 			</div>
 			<div class="director-line">
 				<div class="director">Режиссер</div>
-				<div class="director-name"><?= implode(', ',$movie['DIRECTOR'])?></div>
+				<div class="director-name"><?= implode(', ', $movie['DIRECTOR']) ?></div>
 			</div>
 			<div class="cast-line">
 				<div class="cast">В главных ролях</div>
